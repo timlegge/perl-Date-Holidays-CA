@@ -462,7 +462,9 @@ my %HOLIDAYS_FOR = (
             \&_easter_monday,            'Easter Monday', 'Lundi de Pâques',
             \&_victoria_day,             'Victoria Day', 'Fête de la Reine',
             \&_canada_day,               'Canada Day', 'Fête du Canada',
+            \&_civic_holiday,            'Civic Holiday', 'Fête Civique',
             \&_labour_day,               'Labour Day', 'Fête du Travail',
+            \&_truth_reconciliation_day, 'National Day for Truth and Reconciliation', 'Journée nationale de la vérité et de la réconciliation',
             \&_thanksgiving_day,         'Thanksgiving Day', 'Action de Grâce',
             \&_remembrance_day,          'Remembrance Day', 'Jour du Souvenir',
             \&_christmas_day,            'Christmas Day', 'Noël',
@@ -473,6 +475,7 @@ my %HOLIDAYS_FOR = (
             \&_new_years_day,            'New Year\'s Day', 'Jour de l\'An',
             \&_family_day,               'Family Day', 'Jour de la Famille',
             \&_good_friday,              'Good Friday', 'Vendredi Saint',
+            \&_easter_monday,            'Easter Monday', 'Lundi de Pâques',
             \&_victoria_day,             'Victoria Day', 'Fête de la Reine',
             \&_canada_day,               'Canada Day', 'Fête du Canada',
             \&_civic_holiday,            'Alberta Heritage Day', 'Jour d\'Héritage d\'Alberta',
@@ -480,10 +483,12 @@ my %HOLIDAYS_FOR = (
             \&_thanksgiving_day,         'Thanksgiving Day', 'Action de Grâce',
             \&_remembrance_day,          'Remembrance Day', 'Jour du Souvenir',
             \&_christmas_day,            'Christmas Day', 'Noël',
+            \&_boxing_day,               'Boxing Day', 'Lendemain de Noël',
     ],
     
     BC => [
             \&_new_years_day,            'New Year\'s Day', 'Jour de l\'An',
+            \&_family_day,               'Family Day', 'Jour de la Famille',
             \&_good_friday,              'Good Friday', 'Vendredi Saint',
             \&_victoria_day,             'Victoria Day', 'Fête de la Reine',
             \&_canada_day,               'Canada Day', 'Fête du Canada',
@@ -500,7 +505,6 @@ my %HOLIDAYS_FOR = (
             \&_good_friday,              'Good Friday', 'Vendredi Saint',
             \&_victoria_day,             'Victoria Day', 'Fête de la Reine',
             \&_canada_day,               'Canada Day', 'Fête du Canada',
-            \&_civic_holiday,            'Civic Holiday', 'Congé Statutaire',
             \&_labour_day,               'Labour Day', 'Fête du Travail',
             \&_thanksgiving_day,         'Thanksgiving Day', 'Action de Grâce',
             \&_remembrance_day,          'Remembrance Day', 'Jour du Souvenir',
@@ -509,6 +513,7 @@ my %HOLIDAYS_FOR = (
     
     NB => [
             \&_new_years_day,            'New Year\'s Day', 'Jour de l\'An',
+            \&_family_day,               'Family Day', 'Le jour de la Famille',
             \&_good_friday,              'Good Friday', 'Vendredi Saint',
             \&_victoria_day,             'Victoria Day', 'Fête de la Reine',
             \&_canada_day,               'Canada Day', 'Fête du Canada',
@@ -517,6 +522,7 @@ my %HOLIDAYS_FOR = (
             \&_thanksgiving_day,         'Thanksgiving Day', 'Action de Grâce',
             \&_remembrance_day,          'Remembrance Day', 'Jour du Souvenir',
             \&_christmas_day,            'Christmas Day', 'Noël',
+            \&_boxing_day,               'Boxing Day', 'Lendemain de Noël',
     ],
     
     NL => [
@@ -525,23 +531,23 @@ my %HOLIDAYS_FOR = (
             \&_good_friday,              'Good Friday', 'Vendredi Saint',
             \&_st_georges_day,           'St George\'s Day', 'La Saint-Georges',
             \&_victoria_day,             'Victoria Day', 'Fête de la Reine',
-            \&_nl_discovery_day,         'Discovery Day', 'Jour de la Découverte',
+            \&_nl_discovery_day,         'June Day', 'Jour de juin',
             \&_canada_day,               'Memorial Day', 'Fête du Canada',
             \&_orangemens_day,           'Orangemen\'s Day', 'Fête des Orangistes',
             \&_labour_day,               'Labour Day', 'Fête du Travail',
+            \&_truth_reconciliation_day, 'National Day for Truth and Reconciliation', 'Journée nationale de la vérité et de la réconciliation',
             \&_thanksgiving_day,         'Thanksgiving Day', 'Action de Grâce',
-            \&_remembrance_day,          'Remembrance Day', 'Jour du Souvenir',
+            \&_remembrance_day,          'Armistice Day (Remembrance Day)', 'Jour du Souvenir',
             \&_christmas_day,            'Christmas Day', 'Noël',
             \&_boxing_day,               'Boxing Day', 'Lendemain de Noël',
     ],
     
     NS => [
             \&_new_years_day,            'New Year\'s Day', 'Jour de l\'An',
+            \&_family_day,               'Nova Scotia Heritage Day', 'Le jour de la Famille',
             \&_good_friday,              'Good Friday', 'Vendredi Saint',
             \&_canada_day,               'Canada Day', 'Fête du Canada',
-            \&_civic_holiday,            'Natal Day', 'Jour de la Fondation',
             \&_labour_day,               'Labour Day', 'Fête du Travail',
-            \&_remembrance_day,          'Remembrance Day', 'Jour du Souvenir',
             \&_christmas_day,            'Christmas Day', 'Noël',
     ],
     
@@ -551,7 +557,7 @@ my %HOLIDAYS_FOR = (
             \&_victoria_day,             'Victoria Day', 'Fête de la Reine',
             \&_national_aboriginal_day,  'National Aboriginal Day', 'Journée Nationale des Autochtones',
             \&_canada_day,               'Canada Day', 'Fête du Canada',
-            \&_civic_holiday,            'Civic Holiday', 'Congé Statutaire',
+            \&_civic_holiday,            'Civic Holiday', 'Fête Civique',
             \&_labour_day,               'Labour Day', 'Fête du Travail',
             \&_thanksgiving_day,         'Thanksgiving Day', 'Action de Grâce',
             \&_remembrance_day,          'Remembrance Day', 'Jour du Souvenir',
@@ -562,8 +568,10 @@ my %HOLIDAYS_FOR = (
     NU => [
             \&_new_years_day,            'New Year\'s Day', 'Jour de l\'An',
             \&_good_friday,              'Good Friday', 'Vendredi Saint',
+            \&_easter_monday,            'Easter Monday', 'Lundi de Pâques',
             \&_victoria_day,             'Victoria Day', 'Fête de la Reine',
             \&_canada_day,               'Canada Day', 'Fête du Canada',
+            \&_nunavut_day,              'Nunavut Day', 'Jour du Nunavut',
             \&_civic_holiday,            'Civic Holiday', 'Congé Statutaire',
             \&_labour_day,               'Labour Day', 'Fête du Travail',
             \&_thanksgiving_day,         'Thanksgiving Day', 'Action de Grâce',
@@ -579,7 +587,6 @@ my %HOLIDAYS_FOR = (
             \&_victoria_day,             'Victoria Day', 'Fête de la Reine',
             \&_canada_day,               'Canada Day', 'Fête du Canada',
             \&_civic_holiday,            'Civic Holiday', 'Congé Statutaire',
-            \&_labour_day,               'Labour Day', 'Fête du Travail',
             \&_thanksgiving_day,         'Thanksgiving Day', 'Action de Grâce',
             \&_christmas_day,            'Christmas Day', 'Noël',
             \&_boxing_day,               'Boxing Day', 'Lendemain de Noël',
@@ -590,19 +597,16 @@ my %HOLIDAYS_FOR = (
             \&_family_day,               'Islander Day', 'Fête des Insulaires',
             \&_good_friday,              'Good Friday', 'Vendredi Saint',
             \&_canada_day,               'Canada Day', 'Fête du Canada',
-            \&_civic_holiday,            'Natal Day', 'Jour de la Fondation',
             \&_labour_day,               'Labour Day', 'Fête du Travail',
-            \&_thanksgiving_day,         'Thanksgiving Day', 'Action de Grâce',
+            \&_truth_reconciliation_day, 'National Day for Truth and Reconciliation', 'Journée nationale de la vérité et de la réconciliation',
             \&_remembrance_day,          'Remembrance Day', 'Jour du Souvenir',
             \&_christmas_day,            'Christmas Day', 'Noël',
-            \&_boxing_day,               'Boxing Day', 'Lendemain de Noël',
     ],
     
     QC => [
             \&_new_years_day,            'New Year\'s Day', 'Jour de l\'An',
             \&_good_friday,              'Good Friday', 'Vendredi Saint',
-            \&_easter_monday,            'Easter Monday', 'Lundi de Pâques',
-            \&_victoria_day,             'Victoria Day', 'Journée Nationale des Patriotes / Fête de la Reine',
+            \&_victoria_day,             'National Patriot\'s Day', 'Journée Nationale des Patriotes / Fête de la Reine',
             \&_st_john_baptiste_day,     'Saint-Jean-Baptiste Day', 'La Saint-Jean',
             \&_canada_day,               'Canada Day', 'Fête du Canada',
             \&_labour_day,               'Labour Day', 'Fête du Travail',
@@ -627,6 +631,7 @@ my %HOLIDAYS_FOR = (
             \&_new_years_day,            'New Year\'s Day', 'Jour de l\'An',
             \&_good_friday,              'Good Friday', 'Vendredi Saint',
             \&_victoria_day,             'Victoria Day', 'Fête de la Reine',
+            \&_national_aboriginal_day,  'National Aboriginal Day', 'Journée Nationale des Autochtones',
             \&_canada_day,               'Canada Day', 'Fête du Canada',
             \&_yt_discovery_day,         'Discovery Day', 'Jour du découverte',
             \&_labour_day,               'Labour Day', 'Fête du Travail',
@@ -891,6 +896,16 @@ sub _labour_day {
     ); 
 }
 
+sub _truth_reconciliation_day {
+    my $year = shift;
+
+    return DateTime->new(
+        year  => $year,
+        month => 9,
+        day   => 30,
+    );
+}
+
 sub _thanksgiving_day {
     my $year = shift;
 
@@ -1034,6 +1049,10 @@ December 25.
 
 CA, NL, NT, NU, ON, PE.  December 26.
 
+=item I<National Day for Truth and Reconciliation>
+
+CA and PE. September 30.
+
 =back
 
 =head1 REFERENCES
@@ -1154,7 +1173,7 @@ Rick Scott <rick@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2006-2009 by Rick Scott
+Copyright (C) 2006-2022 by Rick Scott
 
 This module is free software!  You can copy, modify, share and
 distribute it under the same license as Perl itself.
