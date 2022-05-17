@@ -53,11 +53,14 @@ on for details.
 =cut
 
 
-package Date::Holidays::CA;
-
-use 5.006;
 use strict;
 use warnings;
+package Date::Holidays::CA;
+# VERSION
+
+# ABSTRACT: Date::Holidays::CA determines public holidays for Canadian jurisdictions
+
+use 5.006;
 use Carp;
 use DateTime;
 use DateTime::Event::Easter;
@@ -78,9 +81,6 @@ our %EXPORT_TAGS = ( 'all' => [ qw(
 
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw();
-
-our $VERSION = '0.03';
-
 
 =head1 FUNCTIONS / METHODS
 
@@ -1154,10 +1154,6 @@ For reasons outlined in the two sections above, please be forewarned
 that what days are considered holidays may change with versions of
 the module.
 
-=head1 AUTHOR
-
-Rick Scott <rick@cpan.org>
-
 =head1 SEE ALSO
 
 =over
@@ -1169,13 +1165,5 @@ Rick Scott <rick@cpan.org>
 =item DateTime::Event::Easter
 
 =back
-
-
-=head1 COPYRIGHT AND LICENSE
-
-Copyright (C) 2006-2022 by Rick Scott
-
-This module is free software!  You can copy, modify, share and
-distribute it under the same license as Perl itself.
 
 =cut
