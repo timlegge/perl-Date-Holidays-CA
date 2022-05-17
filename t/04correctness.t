@@ -4,7 +4,7 @@ use Test::More qw(no_plan);
 
 BEGIN { use_ok('Date::Holidays::CA', qw(:all)) };
 
-# correctness tests.  
+# correctness tests.
 #     do the holidays actually fall on the days we say they do?
 #     do we get back the right holidays for the province we give?
 #     do we get back the holiday names in the right language?
@@ -12,28 +12,28 @@ BEGIN { use_ok('Date::Holidays::CA', qw(:all)) };
 # load up a table of representative years and see if the module's
 # output matches.
 
-my %CANONICAL_HOLIDAYS_FOR  = canonical_holidays(); 
-my %SUBSTITUTE_HOLIDAYS_FOR = substitute_holidays(); 
+my %CANONICAL_HOLIDAYS_FOR  = canonical_holidays();
+my %SUBSTITUTE_HOLIDAYS_FOR = substitute_holidays();
 
 foreach my $year (keys %CANONICAL_HOLIDAYS_FOR) {
     my $calendar = Date::Holidays::CA->new(
         {language => 'EN', province => 'CA'}
     );
-    my $holidays_ref = $calendar->holidays($year); 
+    my $holidays_ref = $calendar->holidays($year);
 
     # first check that we've generated the correct number of holidays
-    is ( 
-         scalar keys %{$holidays_ref},  
+    is (
+         scalar keys %{$holidays_ref},
          scalar keys %{$CANONICAL_HOLIDAYS_FOR{$year}},
          "correct number of holidays for $year"
     );
 
     # now check the individual dates
     foreach my $holiday_name (keys %{$CANONICAL_HOLIDAYS_FOR{$year}}) {
-        my ($canon_year, $canon_month, $canon_day) = 
-            split '-', $CANONICAL_HOLIDAYS_FOR{$year}->{$holiday_name}; 
+        my ($canon_year, $canon_month, $canon_day) =
+            split '-', $CANONICAL_HOLIDAYS_FOR{$year}->{$holiday_name};
 
-        is( 
+        is(
             $holidays_ref->{$canon_month . $canon_day},
             $holiday_name,
             "correct date for $year $holiday_name"
@@ -44,7 +44,7 @@ foreach my $year (keys %CANONICAL_HOLIDAYS_FOR) {
 
 ## pseudo-DATA section ############################################
 
-sub canonical_holidays { 
+sub canonical_holidays {
     1583 => {
         'New Year\'s Day' =>               '1583-01-01',
         'Good Friday' =>                   '1583-04-08',
@@ -333,7 +333,7 @@ sub canonical_holidays {
 };
 
 
-sub substitute_holidays { 
+sub substitute_holidays {
     1583 => {
         'New Year\'s Day' =>               '1583-01-03',
         'Good Friday' =>                   '1583-04-08',
