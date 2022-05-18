@@ -4,10 +4,10 @@ Revision history for Perl extension Date::Holidays::CA.
 
 0.04 -- Tue May 17 21:07:46 ADT 2022
 
-    6ba0c58 Reverse order of the Changes and add Automated release update
-    10fa5ab Move build to Dist::Zilla
-    baf98e8 Remove spaces on line endings
-    01d48da Add National Day for Truth and Reconciliation and update Holidays
+    - 6ba0c58 Reverse order of the Changes and add Automated release update
+    - 10fa5ab Move build to Dist::Zilla
+    - baf98e8 Remove spaces on line endings
+    - 01d48da Add National Day for Truth and Reconciliation and update Holidays
 
 0.03  Released Fri Sep 24 2010.
 
