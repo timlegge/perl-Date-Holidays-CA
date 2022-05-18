@@ -2,6 +2,12 @@ Revision history for Perl extension Date::Holidays::CA.
 
 {{$NEXT}}
 
+0.05 -- Wed May 18 18:57:16 ADT 2022
+
+    - b794c1a Add .gitignore file
+    - c5eabc4 Update for release version
+    - e2bc144 v0.04
+
 0.04 -- Tue May 17 21:07:46 ADT 2022
 
     - 6ba0c58 Reverse order of the Changes and add Automated release update
